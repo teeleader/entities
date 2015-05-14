@@ -6,8 +6,8 @@ describe("Encode->decode test", function(){
 	var testcases = [
 		{
 			input: "asdf & ÿ ü '",
-			xml: "asdf &amp; &#xFF; &#xFC; &apos;",
-			html: "asdf &amp; &yuml; &uuml; &apos;"
+			xml: "asdf &amp; &#xFF; &#xFC; &#39;",
+			html: "asdf &amp; &yuml; &uuml; &#39;"
 		}, {
 			input: "&#38;",
 			xml: "&amp;#38;",
@@ -59,7 +59,8 @@ describe("Decode test", function(){
 		{ input: "&#x3a;",     output: ":" },
 		{ input: "&#x3A;",     output: ":" },
 		{ input: "&#X3a;",     output: ":" },
-		{ input: "&#X3A;",     output: ":" }
+		{ input: "&#X3A;",     output: ":" },
+		{ input: "&#39;",      output: "'" }
 	];
 	testcases.forEach(function(tc) {
 		it("should XML decode " + tc.input, function(){
