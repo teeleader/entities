@@ -1,6 +1,6 @@
 {
   "name": "@golfnoweng/entities",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Encode & decode XML/HTML entities with ease",
   "author": "Felix Boehm <me@feedic.com>",
   "keywords": [
